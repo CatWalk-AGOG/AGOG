@@ -9,7 +9,7 @@ import {
 
 export default function SliderImage()  {
       const product = useSelector(selProduct)
-      console.log(product)
+      
       
         return (
             <div>

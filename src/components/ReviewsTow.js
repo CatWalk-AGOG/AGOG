@@ -1,7 +1,6 @@
 import React from "react";
 
 function ReviewsTow({ recomande, summary, body }) {
-  console.log(recomande);
   
     if (recomande === true) {
       return (

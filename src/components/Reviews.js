@@ -7,8 +7,6 @@ import ReviewsTow from "./ReviewsTow.js";
 import StaerReview2 from "./StaerReview2.js";
 
 function Reviews({ response,addcounter,count ,addhelp,counter}) {
-  console.log(counter);
-  console.log(response.length);
   if (count<response.length){
     return (
       <div className="    flex flex-col col-start-4 col-end-8  ">
