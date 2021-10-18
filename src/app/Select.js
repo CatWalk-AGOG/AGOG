@@ -3,15 +3,15 @@ import SelectTag from './SelectTag.js'
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
- productAsync,products,initProduct,selProduct,damnProduct
+ productAsync,products,initProduct,selProduct, addBag, addProduct
 } from '../features/counter/counterSlice'
-import { productsArray } from './products.js';
 
 export default function Select() {
     const dispatch = useDispatch()
     const product = useSelector(products)
     const selProd = useSelector(selProduct) 
-    
+    const add = useSelector(addProduct)
+   
     useEffect(()=>{
          dispatch(productAsync())
     },[])
@@ -20,9 +20,7 @@ export default function Select() {
         dispatch(initProduct(product[0]))
     },[product])
 
-    console.log(product)
-    console.log(selProd)
-    
+ 
    
 
   
@@ -164,11 +162,11 @@ export default function Select() {
             </section>
             <SelectTag />
             <label class=" text-left flex gap-6 " >
-                <button type="submit" className={` w-60 border border-transparent rounded-md border-gray-200  flex items-center gap-28 h-12 text-base font-medium text-black hover:bg-gray-700 `}><p className="m-2 " >Add to bag</p> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <button type="button" className={` w-60 border border-transparent rounded-md border-gray-200  flex items-center gap-28 h-12 text-base font-medium text-black hover:bg-gray-700 `} onClick={()=>dispatch(addBag())} ><p className="m-2 " >Add to bag</p> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" cliprule="evenodd" />
                 </svg></button>
                 <select class="form-select block w-16 h-12">
-                    <option>1</option>
+                    <option>{add}</option>
                     
                     </select>
               </label>
