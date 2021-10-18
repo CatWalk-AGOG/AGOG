@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.wrapper {
+    display: flex;
+    overflow: auto;
+    width: 850px;
+  }
+  .wrapper::-webkit-scrollbar {
+    width: 0;
+  }
 
 
 body {
