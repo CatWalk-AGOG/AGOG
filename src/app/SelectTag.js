@@ -20,9 +20,9 @@ export default function SelectTag() {
             <label class=" text-left flex gap-6" >
                
                 <select class="form-select block w-56 h-12" onClick={Target} >
-                     {Object.values(selprod.skus).map((e,k)=>{
+                     {/* {Object.values(selprod.skus).map((e,k)=>{
                          return <option key={k} value={e.quantity} >{e.size}</option>
-                     })}
+                     })} */}
                      
                 </select>
                 <select class="form-select block w-20 h-12">

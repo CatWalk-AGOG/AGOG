@@ -8,4 +8,4 @@ export const store = configureStore({
   },
 });
 
-store.dispatch(dis())
+
