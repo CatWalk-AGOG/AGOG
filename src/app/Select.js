@@ -12,10 +12,20 @@ export default function Select() {
     const product = useSelector(products)
     const selProd = useSelector(selProduct) 
     
+    useEffect(()=>{
+         dispatch(productAsync())
+    },[])
+
+    useEffect(()=>{
+        dispatch(initProduct(product[0]))
+    },[product])
+
+    console.log(product)
+    console.log(selProd)
     
    
 
-   
+  
 
     return (
 
@@ -165,4 +175,5 @@ export default function Select() {
           
         </div>
     )
+ 
 }

@@ -22,10 +22,33 @@ const App = () => {
           <Selector/>   
           
     </div>
-    <div className=' row-span-2 bg-gray-600 h-64 ' > 
-       <div></div>
-       <div></div>
-    </div>
+    <div className="grid grid-flow-col">
+          <div className="">
+            <h5></h5>
+            <p></p>
+          </div>
+          <div className="">
+            <ul>
+              <li className="flex flex-auto">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Some Stuff about guarantee
+              </li>
+            </ul>
+          </div>
+        </div>
   </div>
  </div>
   )

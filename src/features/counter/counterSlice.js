@@ -5,8 +5,8 @@ import { productsArray } from '../../app/products';
 
 const initialState ={
   status : 'get',
-  product:productsArray,
-  initProduct:productsArray[0],
+  product:[],
+  initProduct:{},
   addToBag: 0,
   enable : 'enable'
 }
@@ -59,6 +59,16 @@ export const productSlice = createSlice({
      
   },
 });
+
+export const dis = ()=> {
+  return (dispatch,getState)=>{
+        const stateBefore = getState()
+        dispatch(productAsync)
+  }
+}
+
+
+
 
 export const { initProduct, damnProduct } = productSlice.actions;
 

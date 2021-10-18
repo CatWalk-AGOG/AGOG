@@ -9,12 +9,13 @@ import {
 
 export default function SliderImage()  {
       const product = useSelector(selProduct)
-     
+      console.log(product)
+      
         return (
             <div>
                 
                 <Carousel  interval="5000" transitionTime="1000">
-                    {product.photos.map((e,k)=>{
+                    {product?.photos?.map((e,k)=>{
                        return  <div>
                            <img src={e.thumbnail_url} className='h-96' ></img>
                        </div>
@@ -22,6 +23,7 @@ export default function SliderImage()  {
                 </Carousel>
             </div>
         )
+     
     };
     
     
