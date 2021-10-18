@@ -10,8 +10,10 @@ import Outfit from './components/Outfit';
 import axios from 'axios';
 import Reviews from "./components/Reviews.js";
 import Slider from "./components/Slider.js";
+import QandA from "./Components/QandA.jsx";
 
-const App = () => {
+
+const NameOfTheService  = () => {
 
   
   const [data, setData] = useState([])
@@ -101,7 +103,9 @@ const App = () => {
 
             <Slider />
             <Reviews counter={counter} response={reponse} count={count} addcounter={() => addcounter()} addhelp={() => addhelp()} />
-
+            <div>
+                <QandA />
+            </div>
         </div>
  </div>
   )
